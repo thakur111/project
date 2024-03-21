@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On: AR Bike</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #info { position: absolute; top: 20px; left: 20px; color: #fff; }
+    </style>
+</head>
+<body>
+    <div id="info">Scan the marker to try-on the bike!</div>
+
+    <a-scene embedded arjs="sourceType: webcam;">
+        <!-- Marker -->
+        <a-marker preset="hiro">
+            <!-- Bicycle Model -->
+            <a-entity position="0 0 0" rotation="0 180 0" obj-model="obj: url(cycle.obj); mtl: url(cycle.mtl)"></a-entity>
+        </a-marker>
+
+        <!-- Camera -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>

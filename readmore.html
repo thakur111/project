@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Shop - Read More</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #274d5a;
+        }
+
+        header {
+            background-color: #274d5a;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .read-more-content {
+            display: none;
+        }
+
+        .read-more-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #274d5a;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .read-more-btn:hover {
+            background-color: #274d5a;
+        }
+
+        .redirect-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #274d5a;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .redirect-btn:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cycle Shop</h1>
+    </header>
+
+    <section>
+        <h2>Latest Bikes</h2>
+        <p>
+            Welcome to our cycle shop! Explore our latest collection of bikes designed for various terrains and preferences.
+        </p>
+        <div class="read-more-content">
+            <p>
+                Whether you're a mountain biking enthusiast or a city commuter, we have the perfect bike for you. Our
+                high-quality bikes are built for durability and performance, ensuring a smooth and enjoyable ride every
+                time.
+            </p>
+            <p>
+                Browse through our selection and find the bike that suits your style. From sleek road bikes to rugged
+                mountain bikes, we've got it all. Plus, don't forget to check out our accessories and gear to enhance
+                your cycling experience.
+            </p>
+        </div>
+        <a href="javascript:void(0);" class="read-more-btn" onclick="toggleReadMore()">Read More</a>
+        <a href="index.html" class="redirect-btn">Go to Homepage</a>
+    </section>
+
+    <script>
+        function toggleReadMore() {
+            var content = document.querySelector('.read-more-content');
+            var btn = document.querySelector('.read-more-btn');
+
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                btn.textContent = 'Read Less';
+            } else {
+                content.style.display = 'none';
+                btn.textContent = 'Read More';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
